@@ -1,0 +1,38 @@
+. ~/play/esp/esp-idf/export.sh </br></br>
+
+idf.py build</br></br>
+
+idf.py -p /dev/ttyUSB0 flash</br></br>
+
+idf.py -p /dev/ttyUSB0 monitor</br></br>
+
+Consult <b>/home/p/play/esp/esp-idf/make/project.mk</b>
+for options on 'make'</br>
+
+help:<br>
+	@echo "Welcome to Espressif IDF build system. Some useful make targets:"<br>
+	@echo ""<br>
+	@echo "make menuconfig - Configure IDF project"<br>
+	@echo "make defconfig - Set defaults for all new configuration options"<br>
+	@echo ""<br>
+	@echo "make all - Build app, bootloader, partition table"<br>
+	@echo "make flash - Flash app, bootloader, partition table to a chip"<br>
+	@echo "make clean - Remove all build output"<br>
+	@echo "make size - Display the static memory footprint of the app"<br>
+	@echo "make size-components, size-files - Finer-grained memory footprints"<br>
+	@echo "make size-symbols - Per symbol memory footprint. Requires COMPONENT=<component>"<br>
+	@echo "make erase_flash - Erase entire flash contents"<br>
+	@echo "make erase_otadata - Erase ota_data partition; First bootable partition (factory or OTAx) will be used on next boot."<br>
+	@echo "                     This assumes this project's partition table is the one flashed on the device."<br>
+	@echo "make monitor - Run idf_monitor tool to monitor serial output from app"<br>
+	@echo "make simple_monitor - Monitor serial output on terminal console"<br>
+	@echo "make list-components - List all components in the project"<br>
+	@echo ""<br>
+	@echo "make app - Build just the app"<br>
+	@echo "make app-flash - Flash just the app"<br>
+	@echo "make app-clean - Clean just the app"<br>
+	@echo "make print_flash_cmd - Print the arguments for esptool when flash"<br>
+	@echo "make check_python_dependencies - Check that the required python packages are installed"<br>
+	@echo ""<br>
+	@echo "See also 'make bootloader', 'make bootloader-flash', 'make bootloader-clean', "<br>
+	@echo "'make partition_table', etc, etc."<br>
