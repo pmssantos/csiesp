@@ -2,7 +2,7 @@ import socket
 
 UDP_IP = "192.168.4.1"
 THIS_IP = "192.168.4.2"
-UDP_PORT = 3003
+UDP_PORT = 3333
 MESSAGE = b"Hello, World!"
 
 print("UDP target IP: %s" % UDP_IP)
